@@ -1,0 +1,138 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(158, 36%, 37%);
+  --clr-primary-bg: hsl(30, 38%, 92%);
+  --clr-dark-blue: hsl(212, 21%, 14%);
+  --clr-gray: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-selected: #1a4031;
+  --font-size-p: 14px;
+
+  --border-radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-p);
+  font-family: 'Montserrat';
+  background-color: var(--clr-primary-bg);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.card {
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 350px;
+  overflow: hidden;
+  width: 500px;
+  border-radius: var(--border-radius);
+}
+
+.perfume-picture {
+
+  background: url("/images/image-product-desktop.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+
+.card__content {
+  background-color: var(--clr-white);
+  padding: 1.5em;
+  flex: 1 1 0;
+}
+
+.card__header {
+  text-transform: uppercase;
+  color: var(--clr-gray);
+  font-size: .65rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card__title {
+  font-family: 'Fraunces';
+  color: var(--clr-dark-blue);
+  margin: 0;
+  margin-top: .8rem;
+  line-height: 1em;
+}
+
+.card__article {
+  font-weight: 500;
+  font-size: .8rem;
+  color: var(--clr-gray);
+  line-height: 1.2rem;
+}
+
+.price {
+  display: flex;
+
+  align-items: center;
+}
+
+.price__now {
+  font-family: 'Fraunces';
+  color: var(--clr-primary);
+  font-size: 2em;
+  margin-right: .5em;
+}
+
+.price__old {
+  text-decoration: line-through;
+  color: var(--clr-gray);
+  font-size: .8em;
+}
+
+.cart-button {
+  display: flex;
+
+  margin-top: 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: 'Montserrat';
+  width: 100%;
+  font-size: .9em;
+  padding: 1em;
+  justify-content: center;
+}
+
+.cart-button:hover {
+  background-color: var(--clr-selected);
+
+}
+
+.icon {
+  height: 15px;
+  width: auto;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 300px;
+  }
+
+  .perfume-picture {
+    content: url("/images/image-product-mobile.jpg");
+  }
+}
