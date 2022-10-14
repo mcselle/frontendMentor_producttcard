@@ -43,7 +43,7 @@ main {
 
 .perfume-picture {
 
-  background: url("/images/image-product-desktop.jpg") no-repeat;
+  background: url("images/image-product-desktop.jpg") no-repeat;
   background-size: cover;
   width: 100%;
 }
@@ -133,6 +133,6 @@ main {
   }
 
   .perfume-picture {
-    content: url("/images/image-product-mobile.jpg");
+    content: url("images/image-product-mobile.jpg");
   }
 }
